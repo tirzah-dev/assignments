@@ -1,0 +1,27 @@
+h1 {
+    color: darkgreen;
+}
+h1, h2{
+    font-family: "Georgia";
+    text-align: center;
+}
+p {
+    line-height: 25px;
+}
+ul{
+    list-style-position: inside;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.allCaps{
+    text-transform: uppercase; 
+}
+img{
+    float: left;
+    clear: both;
+    margin-right: 25px;
+}
