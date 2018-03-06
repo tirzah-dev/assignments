@@ -1,6 +1,6 @@
 var shopper = {
-    name = "Alex";
-    age = 38;
-    lovesVolley = true;
-    groceryCart = ["pump", "athletic tape", "socks", "water", "protein bars", "sunglasses", "hat"];
+    name = "Alex",
+    age = 38,
+    lovesVolley = true,
+    groceryCart = ["ball pump", "athletic tape", "socks", "water", "protein bars", "sunglasses", "hat"]
 }
