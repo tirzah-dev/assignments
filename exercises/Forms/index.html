@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="submit" name="login"></form>
+        <input id="firstName" name="firstName" type="text" placeholder="First Name">
+        <input name="LastName" type="text" placeholder="Last Name">
+        <textarea name="input3" id="comment" cols="30" rows="5" placeholder="comments..."></textarea>
+        <h3>Allergies</h3>
+        <label name="Peanuts" for="peanuts">Peanuts:
+            <input id = "peanuts" type= "checkbox">
+        </label>
+        <label for="pollen/dust">Pollen/Dust:
+            <input id = "pollen-dust" type="checkbox">
+        </label>
+        <label for="wheat">Wheat:
+            <input id = "wheat" type="checkbox">
+        </label>
+        <label for="none">None:
+            <input id = "none" type="checkbox">
+        </label>
+        <h3>Age Range</h3>
+            <label for="age">:0-17
+                <input name="age-range" id = "youth" type="radio">
+            </label>
+            <label for="age">:18-35
+                <input name="age-range" id = "mid" type="radio">
+            </label>
+            <label for="age">:36-dead
+                <input name="age-range" id = "wise" type="radio">
+            </label>
+        <h3>Favorite Color</h3>
+        <select name="color" id="color" value="none">
+            <option value="none">Pick a color</option>
+            <option value="red">red</option>
+            <option value="blue">blue</option>
+            <option value="green">green</option>
+            <option value="silver">silver</option>
+            <option value="pink">pink</option>
+        </select>
+
+        <button>Submit</button>
+        <p id="ouput"></p>
+    </form>
+    <script src="travel.js"></script>
+</body>
+</html>
