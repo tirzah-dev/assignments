@@ -1,0 +1,89 @@
+/* 
+font-family: 'News Cycle', sans-serif;
+font-family: 'Philosopher', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Cinzel', serif; 
+*/
+* {
+    box-sizing: border-box; 
+}
+
+body {
+    background-color: #CBC2B9;
+    font-family: 'Philosopher', sans-serif;
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 5.5em;
+    text-align: center;
+    border-bottom: 5px double black;
+}
+h2 {
+    font-size: 3.25em;
+    text-align: center; 
+}
+h3 {
+    font-size: 3em;
+    text-align: center;
+    border-bottom: 5px double black;
+}
+p {
+    line-height: 25px;
+}
+
+span {
+    color: aquamarine;
+    text-transform: uppercase;
+    font-size: 160%;  
+}
+.bold {
+    color: inherit;
+    font-style: bold;
+}
+.far-right {
+    float: right;
+    display: inline-block;
+}
+.far-left {
+    float: left;
+    display: inline-block;
+}
+img {
+    /* text-align: center; */
+    width: 100%;
+}
+.name{
+    text-decoration: underline;
+    color: aliceblue;
+}
+.italics {
+    font-style: italic; 
+    font-size: 100%;
+    text-transform: capitalize;
+    color: inherit;
+}
+.front-story{
+    column-count: 3;
+}
+.row {
+    display: flex;
+    flex-wrap: auto;
+}
+.col {
+    column-count: 4;
+    
+}
+.classified {
+    display: inline-block;
+    border: 3px solid black;
+    margin: auto;
+    margin-bottom: 3px;
+    line-height: 18px;
+    /* width: 24%;  */
+    text-align: center;
+    padding: .4em;
+}
+.classified img {
+    width: 100%;
+}
