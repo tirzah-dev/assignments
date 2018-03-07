@@ -1,81 +1,53 @@
-var bookClubers = 
+var bookClubbers = 
     {
-    name: "Juliana",
-    age: 34,
-    nationalOrigin: "Brazil",
-    books:[
-        { 
-        name:"Remembrant",
-        yrPub: 2014,
-        genre: ["fiction", "Young Adult", "suspense"],
-        categories: 
-            {
-            read: true,
-            reading: false,
-            toRead: false
-            }
-        },
-        { 
-        name:"Rising Strong",
-        yrPub: 2015,
-        genre: ["Self-Help", "Research"],
-        categories:
-            {
-            read: true,
-            reading: false,
-            toRead: false
-            }
-        },
-        { 
-        name:"I am Malala",
-        yrPub: 2014,
-        genre: ["Politics", "Biography", "International Best Seller"],
-        categories:
-            {
-            read: true,
-            reading: false,
-            toRead: false,
-            }
-        }
-    ]},
-
-    {
-        name: "Fernanda",
-        age: 38,
-        nationalOrigin: "Brazil",
-        books: [
-            { 
-            name:"Remembrant",
-            yrPub: 2014,
-            genre: ["fiction", "Young Adult", "suspense"],
-            categories:
-                {
-                read: true,
-                reading: false,
-                toRead: false,
+            clubberName: "Juliana",
+            age: 34,
+            nationalOrigin: "Brazil",
+            books:[
+                { 
+                bookName:"Remembrant",
+                yrPub: 2014,
+                genre: ["fiction", "Young Adult", "suspense"],
+                categories: 
+                    {
+                        toRead: false,
+                        reading: false,
+                        read: true
+                    }
+                },
+                { 
+                bookName:"Rising Strong",
+                yrPub: 2015,
+                genre: ["Self-Help", "Research"],
+                categories:
+                    {
+                        toRead: false,
+                        reading: false,
+                        read: true
+                    }
+                },
+                { 
+                bookName:"I am Malala",
+                yrPub: 2014,
+                genre: ["Politics", "Biography", "International Best Seller"],
+                categories:
+                    {
+                        toRead: false,
+                        reading: false,
+                        read: true
+                    }
                 }
-            },
-            { 
-            name:"Rising Strong",
-            yrPub: 2015,
-            genre: ["Self-Help", "Research"],
-            categories:
-                {
-                read: false,
-                reading: false,
-                toRead: true,
-                }
-            },
-            { 
-            name:"I am Malala",
-            yrPub: 2014,
-            genre: ["Politics", "Biography"],
-            categories:
-                {
-                read: true,
-                reading: false,
-                toRead: false,
-                }
-    }]
-]
-},
+                ],
+                //method
+                attendance: function(){
+                    console.log("Eu sou " + this.clubberName + " e eu adoro livros.");
+                }, 
+                    // var monthsInAttendance = [];
+                    // var monthName = getMonth();
+                    // if (attendance === true){
+                    //     monthsInAttendance.push(getMonth());
+                    // }
+                    // return monthsInAttendance;
+    };
+// console.log(bookClubbers.attendance);
+bookClubbers.attendance();
