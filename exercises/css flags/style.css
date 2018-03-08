@@ -1,0 +1,55 @@
+body{
+    font-family: 'Bad Script', cursive;
+    text-align: center;
+    display: block;
+    /* line-height: 200px; */
+}
+h1{
+    display: block;
+}
+.flag{
+    display: block;
+    height: 300px;
+    width: 500px;
+    border: 3px solid black;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+.switzerland{
+    height: 150px;
+    width: 150px;
+}
+.third-width{
+    width: 33%;
+}
+.german-red{
+    background-color: #CC2A1D;
+}
+.french-red{
+    background-color: #DB3F41;
+}
+.swiss-red {
+    background-color: #EC3223;
+}
+
+.white{
+    background-color: #ffffff;
+}
+.french-blue{
+    background-color: #00288F;
+}
+.black{
+    background-color: #000000;
+}
+.german-yellow{
+    background-color: #F9CE46;
+}
+.mad-red{
+    background-color: #EA4E3F;
+}
+.mad-green{
+    background-color: #367B42;
+}
+

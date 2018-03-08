@@ -3,6 +3,7 @@ var bookClubbers =
             clubberName: "Juliana",
             age: 34,
             nationalOrigin: "Brazil",
+            host: true,
             books:[
                 { 
                 bookName:"Remembrant",
@@ -12,7 +13,8 @@ var bookClubbers =
                     {
                         toRead: false,
                         reading: false,
-                        read: true
+                        read: true,
+                        rating: 3
                     }
                 },
                 { 
@@ -21,9 +23,10 @@ var bookClubbers =
                 genre: ["Self-Help", "Research"],
                 categories:
                     {
-                        toRead: false,
+                        toRead: true,
                         reading: false,
-                        read: true
+                        read: false,
+                        rating: "none"
                     }
                 },
                 { 
@@ -34,20 +37,31 @@ var bookClubbers =
                     {
                         toRead: false,
                         reading: false,
-                        read: true
+                        read: true,
+                        rating: 5
                     }
                 }
-                ],
-                //method
-                attendance: function(){
-                    console.log("Eu sou " + this.clubberName + " e eu adoro livros.");
-                }, 
-                    // var monthsInAttendance = [];
-                    // var monthName = getMonth();
-                    // if (attendance === true){
-                    //     monthsInAttendance.push(getMonth());
-                    // }
-                    // return monthsInAttendance;
+            ],
+            attendance: function(){
+                if (this.host === true){
+                    console.log("Eu sou " + this.clubberName + " bem vinda a minha casa. Você leu o livro?");
+                }else{
+                    console.log("Eu sou " + this.clubberName + ". Obrigada por hospedar o 'Book Club' deste mês.")
+                }
+            }
     };
-// console.log(bookClubbers.attendance);
-bookClubbers.attendance();
+
+bookClubbers.friends = ["Rebekah", "Fernanda", "Luciana", "Ali"];
+bookClubbers.gender = "female";
+bookClubbers.friends.push("Heather", "Bianca");
+
+console.log(bookClubbers);
+// bookClubbers.attendance();
+
+
+// var monthsInAttendance = [];
+            // var monthName = getMonth();
+            // if (attendance === true){
+            //     monthsInAttendance.push(getMonth());
+            // }
+            // return monthsInAttendance;
