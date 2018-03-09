@@ -4,23 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li>home</li>
-                <li>about</li>
-                <li>pricing</li>
-                <li>contact</li>
-            </ul>
-        </nav>
         <h1>MARIO PEST CONTROL</h1>
     </header>
+    <main>
+        <ul>
+            <li><img src = "img/Goomba.png" alt = "Goomba" class = "baddie-pic"> Goombas: 5 coins - Total caught:<input type="number" class = "totalCaught" id="goombas-caught" min="0"><input type="text" id="goomba-subtotal"></li>
+            <li><img src = "img/Bob-omb.jpg" alt = "Bob-omb" class = "baddie-pic"> Bob-ombs: 7 coins each - Total caught:<input type="number" class = "totalCaught" id="bob-omb-caught"><input type="text" id="bob-omb-subtotal" min="0"></li>
+            <li><img src = "img/cheep-cheeps.png" alt = "Cheep-Cheep" class = "baddie-pic"> Cheep-Cheeps: 11 coins - Total caught:<input type="number" class = "totalCaught" id="cheep-cheep-caught" min="0"><input type="text" id="cheep-cheep-subtotal"></li>
+        </ul>
+        <h3 id="baddiesGrandTotal">GRAND TOTAL: </h3>
+    </main>
+    <footer>
+        <nav>
+            <li><a href="mailto:mario@mariopestcontrol.com">mario@mariopestcontrol.com</a></li>
+            <li><a href="https://goo.gl/TUicCF" target="blank">www.mariopestcontrol.com</a></li>
+            <li><a href="https://goo.gl/yQF3Wt" target="blank">1983 Pipe Line Drive, New York, NY 10001</a></li>
+        </nav>
+    </footer>
     
     
-    <script src="main.js"></script>
+    <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
+<!-- 
+A total price at the bottom that adds sums the total cost of baddies caught
+(must use Javascript for this math - no hard coded values)
+A footer showing:
+Mario's email address
+Mario's company website url
+Mario's physical address
+A large title at the top of the page entitled "Mario Pest Control" -->

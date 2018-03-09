@@ -1,0 +1,24 @@
+* {
+    font-family: 'Share Tech Mono', monospace;
+};
+header{
+    background-color: #EB3224;
+}
+input{
+    border: none;
+}
+.totalCaught{
+    border-bottom: 2px outset grey;
+    min-width: 40px;
+}
+.baddie-pic{
+    height: 50px;
+    width: 50px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+li{
+    list-style-type: none;
+}
