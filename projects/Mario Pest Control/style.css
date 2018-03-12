@@ -6,13 +6,18 @@
     font-family: marioFont;
     src: url(SuperMario256.ttf);
 }
-
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Share Tech Mono', monospace;
+}
 header {
     font-family: marioFont;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 20vh;
+    height: .40;
     color: white;
     background-color: #EB3224;
     font-size: 2em;
@@ -29,7 +34,6 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Share Tech Mono', monospace;
     font-size: 1em;
     line-height: 3vh;
 }
@@ -52,13 +56,12 @@ input {
 }
 .totalCaught{
     border-bottom: 2px outset grey;
-    /* min-width: 40px; */
+    min-width: 40px;
 }
 .output {
     text-align: center;
 }
 h3 {
-    font-family: 'Share Tech Mono', monospace;
     font-size: 3em;
     text-align: center;
     margin-top: 10vh;
@@ -67,21 +70,20 @@ li{
     list-style: none;
 }
 footer {
-    
-    font-family: 'Share Tech Mono', monospace;
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
+    flex: .09;
     background-color: #EB3224;
     color: white;
     text-align: center;
     justify-content: center;
-    display: inline-block;
 }
-.address {
+/* .address {
     float:right;
     padding-right: 15px;
+    
     justify-items: inherit;
 }
 .weblink{
@@ -90,8 +92,8 @@ footer {
 .email {
     float: left;
     padding-left: 15px;
-}
+} */
 /* RESPONSIVE */
-@media screen and (max-width:320px){
+/* @media screen (min-width:320px){
 
-}
+} */
