@@ -1,18 +1,18 @@
 // // Loop through the following array and count how many "computers" there are. Log the final count:
-// // var officeItems = ["stapler", "monitor", "computer", "desk", "lamp", "computer", "lamp", "stapler", "computer",  "computer"];  
-// // function computerCount(str){
-// //     var arr = officeItems;
-// //     var compCount = 0;
-// //     for (var i = 0; i < arr.length; i++){
-// //         if (arr[i] === str){
-// //             compCount++;
-// //         }
-// //     }
-// //     return compCount; 
-// // }
-// // console.log(computerCount("computer"));
+var officeItems = ["stapler", "monitor", "computer", "desk", "lamp", "computer", "lamp", "stapler", "computer",  "computer"];  
+function computerCount(str){
+    var arr = officeItems;
+    var compCount = 0;
+    for (var i = 0; i < arr.length; i++){
+        if (arr[i] === str){
+            compCount++;
+        }
+    }
+    return compCount; 
+}
+console.log(computerCount("computer"));
 
-// // Loop through the following array and log to the console "old enough" if they are 18 or older, and "not old enough" if thy aren't 18.
+// Loop through the following array and log to the console "old enough" if they are 18 or older, and "not old enough" if they aren't 18.
 var peopleWhoWantToSeeMadMaxFuryRoad = [  
     {
       name: "Mike",
@@ -43,14 +43,19 @@ var arr = peopleWhoWantToSeeMadMaxFuryRoad;
 function ageValidator(arr){
   // console.log(arr.length);
   var out = [];
+  var gender = "";
     for (var i = 0; i < arr.length; i++){
-      // console.log(arr[i]);
-      if (arr[i].age >= 18){
-          out.push(arr[i].name + " is old enough to see Mad Max");
+      if (arr[i].gender === "female"){
+        gender = "her";
       } else {
-          out.push(arr[i].name + " is not old enough to see Mad Max");
+        gender = "him";
+      }
+      if (arr[i].age >= 18){
+        out.push(arr[i].name + " is old enough to see Mad Max, let " + gender + " in.\n");
+      } else {
+          out.push(arr[i].name + " is not old enough to see Mad Max, don't let " + gender + " in.\n");
       } 
     }
-    return out;
+    return out.join("");
 }
 console.log(ageValidator(arr));
