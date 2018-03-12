@@ -13,18 +13,44 @@
         <h1>MARIO PEST CONTROL</h1>
     </header>
     <main>
-        <ul>
-            <li><img src = "img/Goomba.png" alt = "Goomba" class = "baddie-pic"> Goombas: 5 coins - Total caught:<input type="number" class = "totalCaught" id="goombas-caught" min="0"><input type="text" id="goomba-subtotal"></li>
-            <li><img src = "img/Bob-omb.jpg" alt = "Bob-omb" class = "baddie-pic"> Bob-ombs: 7 coins each - Total caught:<input type="number" class = "totalCaught" id="bob-omb-caught"><input type="text" id="bob-omb-subtotal" min="0"></li>
-            <li><img src = "img/cheep-cheeps.png" alt = "Cheep-Cheep" class = "baddie-pic"> Cheep-Cheeps: 11 coins - Total caught:<input type="number" class = "totalCaught" id="cheep-cheep-caught" min="0"><input type="text" id="cheep-cheep-subtotal"></li>
-        </ul>
-        <h3 id="baddiesGrandTotal">GRAND TOTAL: </h3>
+        <div class= "wrapper">
+                <div class="baddies">
+                    <img src = "img/Goomba.png" alt = "Goomba" class = "baddie-pic">
+                    <p>Goombas</p>
+                    <p>Price: 5 coins</p> 
+                    <p>Total caught:</p>
+                    <input type="number" class = "totalCaught" id="goombasCaught" min="0">
+                    <p>subtotal:</p>
+                    <input type="text" disabled class="output" id="goombaSub" value = "0">
+                </div>
+
+                <div class="baddies">
+                        <img src = "img/Bob-omb.jpg" alt = "Bob-omb" class = "baddie-pic">
+                        <p>Bob-ombs</p> 
+                        <p>Price: 7 coins</p>
+                        <p>Total caught:</p>
+                        <input type="number" class = "totalCaught" id="bob-omb-caught" min="0">
+                        <p>subtotal:</p>
+                        <input type="text" disabled class="output" id="bob-omb-sub" value = "0">
+                </div>
+
+                <div class="baddies">
+                    <img src = "img/cheep-cheeps.png" alt = "Cheep-Cheep" class = "baddie-pic">
+                    <br>Cheep-Cheeps 
+                    <br>Price: 11 coins
+                    <br>Total caught:
+                    <input type="number" class = "totalCaught" id="cheepCheepsCaught" min="0">
+                    <br>subtotal:
+                    <input type="text" disabled class="output" id="cheepCheepSub" value = "0">
+                </div>
+        </div>
+        <h3 id="baddiesGrandTotal">GRAND TOTAL:</h3>
     </main>
     <footer>
         <nav>
-            <li><a href="mailto:mario@mariopestcontrol.com">mario@mariopestcontrol.com</a></li>
-            <li><a href="https://goo.gl/TUicCF" target="blank">www.mariopestcontrol.com</a></li>
-            <li><a href="https://goo.gl/yQF3Wt" target="blank">1983 Pipe Line Drive, New York, NY 10001</a></li>
+            <li class="email"><a href="mailto:mario@mariopestcontrol.com">mario@mariopestcontrol.com</a></li>
+            <li class="weblink"><a href="https://goo.gl/TUicCF" target="blank">www.mariopestcontrol.com</a></li>
+            <li class="address"><a href="https://goo.gl/yQF3Wt" target="blank">1983 Pipe Line Drive, New York, NY 10001</a></li>
         </nav>
     </footer>
     

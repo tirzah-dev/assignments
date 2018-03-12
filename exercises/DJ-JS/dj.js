@@ -46,15 +46,15 @@ function useKeyboardChangeStyle(event){
             changeColor("blue");
             break;
     // Red when the mouse button is held down over the square
-        case 82: //code: 114
+        case 82:    
             changeColor("red");
             break;
 //     // Yellow when the mouse button is let go over the square
-        case 89: //code: 121
+        case 89:    
             changeColor("yellow");
             break;
 //     // Green when the mouse is double clicked in the square
-        case 71: // code: 103
+        case 71:    
             changeColor("green");
             break;
     }
