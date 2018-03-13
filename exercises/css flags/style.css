@@ -1,11 +1,16 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    /* border: 1px lime solid; */
+}
 body{
-    font-family: 'Bad Script', cursive;
+    font-family: 'Bad Script';
     text-align: center;
     display: block;
-    /* line-height: 200px; */
 }
 h1{
     display: block;
+    font-size: 1em;
 }
 .flag{
     display: block;
@@ -13,53 +18,249 @@ h1{
     width: 500px;
     border: 3px solid black;
     position: relative;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%)
+    transform: translateX(-50%);
 }
-.switzerland{
-    height: 150px;
-    width: 150px;
+.third-width {
+    width: 33.3%;
 }
-.third-width{
-    width: 33%;
+.forty-width {
+    width: 40%;
 }
-.german-red{
-    background-color: #CC2A1D;
+.forty-five-width{
+    width: 45%;
+}
+.two-third-width{
+    width: 67%;
+}
+.fourth-height{
+    height: 25%;
+}
+.third-height{
+    height: 33.3%;
+}
+.half-height{
+    height: 50%;
+}
+.full-height{
+    height:100%;
+}
+.france{
+    background-color:  #ffffff;
 }
 .french-red{
     background-color: #DB3F41;
-}
-.swiss-red {
-    background-color: #EC3223;
+    height: 100%;
+    position: inherit;
+    top: -50%;
+    right: -100%;
+    transform: translate(-100%, 50%);
 }
 
-.white{
-    background-color: #ffffff;
-}
 .french-blue{
     background-color: #00288F;
-}
-.black{
-    background-color: #000000;
+    height: 100%;
+    position: inherit;
+    top: -100%;
 }
 .german-yellow{
     background-color: #F9CE46;
 }
+.german-red{
+    background-color: #CC2A1D;
+}
+.german-black{
+    background-color: #000000;
+}
 .mad-red{
     background-color: #EA4E3F;
+    position: inherit;
+    top: -100%;
+    right: -33.39%;
 }
 .mad-green{
     background-color: #367B42;
+    position: inherit;
+    top: -100%;
+    right: -33.39%;
 }
-/* sweden yellow - #F8CC46, blue - #266AA2
-gambia red - #BE2C2F, blue - #032186, green - #4A7533,  white - #ffffff
-tonga red - #B22418, white - #ffffff
-japan red - #AD2333,  white - #ffffff
-greek blue - #235FA9 white - #ffffff
-Niger orange - #D15B27, green - #50AC41 ,white - #ffffff
-Maldives red - #C22D3A, green - #367B42, white - #fffff
-Belize red - #BE2C2F(same as gambia), blue - #104082 
-
-*/
-
+.switzerland{
+    height: 300px;
+    width: 300px;
+    background-color: #EC3223;
+}
+.swiss-white-vert{
+    background-color: #ffffff;
+    height: 80%;
+    width: 20%;
+    position: inherit;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, 75%);
+    
+}
+.swiss-white-hz{
+    background-color: #ffffff;
+    height: 20%;
+    width: 80%;
+    position: inherit;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+.sweden{
+    background-color: #266AA2;
+}
+.swed-yellow-vert{
+    background-color: #f8cc46;
+    height: 100%;
+    width: 12%;
+    position: inherit;
+    left: 30%;   
+}
+.swed-yellow-hz{
+    background-color: #f8cc46;
+    height: 20%;
+    width: 100%;
+    position: inherit;
+    top: -55%;
+}
+.gambia {
+    background-color:#FFFFFF;
+}
+.gambia-red{
+    background-color: #BE2C2F;
+}
+.gambia-blue{
+    background-color: #032186;
+    position: inherit;
+    top: 30%;
+    transform: translateY(-100%);
+}
+.gambia-green{
+    background-color: #4A7533;
+    position: inherit;
+    top: 42%;
+    transform: translateY(-100%);
+} 
+.white{
+    background-color: #ffffff;
+} 
+.tonga { 
+    background-color: #B22418;
+}
+.tonga-red-vert{
+    background-color: #B22418;
+    height: 70%;
+    width: 15%;
+    position: relative;
+    top: -45%;
+    left: 50%;
+    transform: translate(-50%, 76%);
+}
+.tonga-red-hz{
+    background-color: #B22418;
+    height: 20%;
+    width: 50%;
+    position: relative;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, 75%);
+}
+.japan-red {
+    background-color: aqua;
+}
+.japan-circle{
+    background-color:#AD2333;
+    border-radius: 50%;
+	width: 40%;
+	height: 65%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.greece {
+    background-color:#235FA9;
+}
+.greek-white-vert{
+    background-color:#ffffff;
+    height: 100%;
+    width: 11.11111%;
+    position: relative;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+.greek-white-hz {
+    background-color: #ffffff;   
+    height: 11.11111%;
+    width: 100%;
+    position: relative;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.greek-blue-hz {
+    background-color: #235FA9;   
+    height: 11.11111%;
+    width: 100%;
+    position: relative;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.greek-top-right{
+    height: 11.1111%;
+    background-color: #D15B27;
+    position: relative;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.bottom{
+    background-color: #50AC41;
+}
+.niger{
+    width:300px;
+}
+.niger-orange{
+    background-color:#D15B27;
+} 
+.niger-green{
+    background-color:#50AC41;
+}
+.niger-circle {
+    background-color:#D15B27;
+    border-radius: 50%;
+	width: 25%;
+	height: 25%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -320%); 
+}
+.maldives-red{
+    background-color:#C22D3A;
+}
+.maldives-green{
+    background-color: #367B42;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.mal-circle {
+    width: 30%;
+    height: 55%;
+    border-radius: 50%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* .belize-flag{
+    img; 
+} */
+/* 
+Belize red - #BE2C2F(same as gambia), blue - #104082   */

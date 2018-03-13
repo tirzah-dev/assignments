@@ -62,7 +62,7 @@ if ("g" > 3){
     console.log("g is not a number");
 }
 
-var myNum = 13;  
+var myNum = 22;  
 // Write your ternary here to log if `myNum` is odd or even.
 var numIs = myNum % 2 === 0 ? "even" : "odd";
 console.log(numIs);
