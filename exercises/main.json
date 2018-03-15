@@ -1,0 +1,52 @@
+{
+"appetizers" : [{
+    "name" : "Tortilla Chips",
+    "ingredients" : ["Corn meal","Vegetable Oil","Salt", "Water"],
+    "description" : "Satisfyingly crunchy and savory."
+    },
+{
+    
+}],
+"cold sandwiches" : [{
+    "name" : "Turkey",
+    "ingredients" : ["Turkey slices","Tomato","cucumber", "red onions", "lettuce", "mayonaise", "dijon mustard", "Whole Grain Wheat Bread"],
+    "description" : "Oven-roasted turkey breast, lettuce, vine-ripened tomatoes and red onions with salt and pepper on Whole Grain with pure mayo and Grey Poupon dijon mustard. Available in whole and half. "
+},
+{
+    "name" : "cucumberSplice",
+    "ingredients" : ["Whole Wheat Bread","Chive flavored Cream cheese spread", "sliced cucumbers"],
+    "description" : "delightfully fresh cucumber nestled between two slices of our fresh baked 100% whole grain wheat bread smothered in our flavorful Chive Cream Cheese Spread"
+}],
+
+"hot sandwiches" : [{
+    "name" : "Grilled Cheese",
+    "ingredients" : ["White Bread","Medium Cheddar"],
+    "description" : "Grilled rustic white bread, delicious Tillamook Medium Cheddar"
+},
+{
+    "name" : "Ruben Melt",
+    "ingredients" : ["Rye Bread", "Corn Beef", "Saurkraut", "Swiss cheese", "House Thousand Island Dressing" ],
+    "description" : "We use hand-trimmed, lean corned beef, cured in delicately seasoned brine and slow cooked. Piled high with melted, real Wisconsin Swiss, sauerkraut and house made Thousand Island dressing. All sandwiched between slices of lightly buttered, toasted rye bread."
+}],
+
+"desserts" : [{
+    "name" : "Chocolate Chip Cookies",
+    "ingredients" : ["chocolate chips","flour", "eggs", "brown sugar"],
+    "description" : "Chocolate chip Cookies baked fresh daily. Perfect sweet ending to a delicous meal."
+},
+{
+    "name" : "Vegan Fudge Brownies",
+    "ingredients" : ["melted chocolate chips","cocao powder", "applesauce", "vanilla", "oat flour"],
+    "description" : "Delicious healthy variation on the traditional brownie. Set to satisfy your sweet tooth without the extra oil and sugar."
+}],
+"drinks" : [{
+    "name" : "Fresh Lemon Aid",
+    "ingredients" : ["Lemons","Water", "Sugar"],
+    "description" : "Refreshing, Sweet and perfect for a relaxing lunch"
+},
+{
+    "name" : "Warm Apple Cider",
+    "ingredients" : ["Apples","Water","Orange slices", "Cinnamon Stick","Cinnamon", "Allspice"],
+    "description" : "This warm and cozy drink served in mugs, to warm your hands and your soul."
+}]
+}
