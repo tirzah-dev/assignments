@@ -1,0 +1,80 @@
+* {
+    margin-top: 0px;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: wisdom;
+    src: url(ThirstyScriptExtraBoldDemo.otf);
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    height: 110vh;
+    font-family: 'Inconsolata', monospace;
+    background-color: aqua;
+}
+h1 {
+    font-size: 7em;
+}
+.outer-square {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: aqua;
+    padding-right: 150px;
+    padding-left: 150px;
+}
+.inner-square {
+    background-color: hotpink;
+    border: 5px solid black;
+    margin: 15px;
+    height: 250px;
+    width: 250px;
+    font-size: 20px; 
+    border-radius: 20%;
+    box-shadow: 10px 10px 5px 0 #999;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.top-left:hover {
+    background-color: #9A65AA;
+    border: 25px groove #FFFFFF;
+    border-radius: 35%;
+    box-shadow: none;
+}
+.top-middle:hover{
+    background-image: url("img/djcat.JPEG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 350px;
+    width: 350px;
+}
+.top-right:hover{
+    background-color: #4E63C2;
+    border: 15px dotted gold;
+    border-radius: 50%;
+}
+.bottom-left:hover{
+    background-color: #F3E1A7;
+    border: none;
+    box-shadow: 15px 15px 15px 0 #20A4F3;
+}
+.bottom-middle:hover{
+    background-color: tomato;
+    border:5px solid white;
+    box-shadow: 30px 40px 30px 0 #fff;
+}
+.bottom-middle:hover:before{
+    padding-bottom: 150px;
+    content: "Skillcrush";
+    font-family: wisdom;
+    color: white;
+}
+.bottom-right:hover{
+    background-color: aqua;
+    border: 20px double whitesmoke;
+    width: 350px;
+}
