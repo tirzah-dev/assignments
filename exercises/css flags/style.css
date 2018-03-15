@@ -33,6 +33,15 @@ h1{
 .two-third-width{
     width: 67%;
 }
+.cross-width{
+    width: 21%;
+}
+.ninth-height{
+    height: 11.11111%;
+}
+.five-ninths{
+    height:55.555%;
+}
 .fourth-height{
     height: 25%;
 }
@@ -182,42 +191,50 @@ h1{
 }
 .greece {
     background-color:#235FA9;
+    position: absolute;
+}
+.inline {
+    display: flex;
+    justify-content: left;
 }
 .greek-white-vert{
     background-color:#ffffff;
     height: 100%;
-    width: 11.11111%;
+    /* width: 11.11111%; */
     position: relative;
     top: -50%;
     left: 50%;
     transform: translate(-50%, 50%);
 }
+.greek-white-hz-cross {
+    background-color: #ffffff;   
+    width: 100%;
+    height: 30px;
+    position: relative;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 .greek-white-hz {
     background-color: #ffffff;   
-    height: 11.11111%;
     width: 100%;
-    position: relative;
+    /* position: relative;
     top: -50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
 }
 .greek-blue-hz {
-    background-color: #235FA9;   
-    height: 11.11111%;
+    background-color: #235FA9;
     width: 100%;
-    position: relative;
-    top: -50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
-.greek-top-right{
-    height: 11.1111%;
+/* .greek-top-right{
+    
     background-color: #D15B27;
     position: relative;
     top: -50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
+} */
 .bottom{
     background-color: #50AC41;
 }
@@ -242,6 +259,7 @@ h1{
 }
 .maldives-red{
     background-color:#C22D3A;
+    margin-bottom: 50px;
 }
 .maldives-green{
     background-color: #367B42;
@@ -250,17 +268,26 @@ h1{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.mal-circle {
+.mal-circle-wh {
     width: 30%;
-    height: 55%;
+    height: 65%;
     border-radius: 50%;
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-/* .belize-flag{
-    img; 
-} */
+.mal-circle-gr{
+    width: 30%;
+    height: 65%;
+    border-radius: 50%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -150%);
+}
+p {
+    margin-bottom: 150px;
+}
 /* 
 Belize red - #BE2C2F(same as gambia), blue - #104082   */
