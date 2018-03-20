@@ -33,7 +33,7 @@ header {
   justify-content: space-around;
 }
 nav {
-    overflow: hidden;
+    /* overflow: hidden; */
     background-color: #000000;
     font-size: .25em;
     font-family: 'Advent Pro', sans-serif;
