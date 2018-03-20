@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Travel Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Marvel|Nixie+One|Reem+Kufi|Bad+Script" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Welcome to WeFlyU!</h1>
+        <h2>Please submit your information information below.</h2>
+    </header>
+    <main>
+        <form id = "travel-form"> 
+            <div class="names">
+                <h2>Traveler Information</h2>
+
+                <label>First Name:</label> <input name= "firstName" style: "text" value:"firstName" required/>
+                <br>
+                <label>Last Name:</label> <input name= "lastName"/>
+                <br>
+                <label>Age:</label> <input name= "age" type="number" min="0"/>
+            </div>
+            <div class="demographic">
+                <label>Gender:</label>
+                <br>
+                <input type="radio" name="gender" value="Male"> <label>Male</label>
+                <input type="radio" name="gender" value="Female"> <label>Female</label>
+                <input type="radio" name="gender" value="Other"><label>Other
+                </label>
+                <br>
+                <label>Destination:</label>
+                <br>
+                <input type="radio" name="destination" value="San Diego, CA"> <label>San Diego, CA</label>
+                <input type="radio" name="destination" value="New York, NY"> <label>New York, NY</label>
+                <input type="radio" name="destination" value="Denver, CO"><label>Denver, CO</label>
+            </div>
+            <div>
+                <label>Special Diet:</label><br>
+                <input type="checkbox" name="diet" value="Nut Allergies"><label>Nut Allergies</label>
+                <input type="checkbox" name="diet" value="Lactose Allergy"><label>Lactose Allergy</label>
+                <input type="checkbox" name="diet" value="Gluten Free"><label>Gluten Free</label>
+                <input type="checkbox" name="diet" value="Vegetarian"><label>Vegetarian</label>
+                <input type="checkbox" name="diet" value="Vegan/WFPB"> <label>Vegan/WFPB</label>
+                <input type="checkbox" name="diet" value="Kosher"><label>Kosher</label>
+            </div>
+            <button>Submit</button>
+        </form>
+    </main>
+</body>
+    <script src= "travel.js" type="text/javascript"></script>
+</html>
