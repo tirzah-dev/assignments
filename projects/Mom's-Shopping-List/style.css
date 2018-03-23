@@ -1,0 +1,31 @@
+/* 
+font-family: 'Indie Flower', cursive;
+font-family: 'Poiret One', cursive;
+font-family: 'Nanum Brush Script', cursive; */
+body{
+    background-image: url(shopper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center; */
+}
+h1{
+    font-family: 'Poiret One', cursive;
+
+    /* font-family: 'Nanum Brush Script', cursive; */
+}
+p{
+    font-family: 'Poiret One', cursive;
+    font-size: 23px;
+}
+input {
+    font-family: 'Poiret One', cursive;
+}
+button, #submit {
+    font-family: 'Poiret One', cursive;
+    border-radius: 50%;
+    background-color: #A4A5AE;
+}
+button, p{
+    display: inline-block;
+    margin-left: 10px;
+}

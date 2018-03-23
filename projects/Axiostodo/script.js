@@ -4,8 +4,9 @@ let todoList = document.getElementById("toDos");
 let form = document.getElementById("createTodoList");
 
 function domStuff(todoItem){
-    var id = todoItem._id;
+    let id = todoItem._id;
     let listItem = document.createElement("div");
+    
     let title = document.createElement("p");
     let description = document.createElement("p");
     let price = document.createElement("p");

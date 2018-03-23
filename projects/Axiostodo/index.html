@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Comfortaa|Limelight" rel="stylesheet">
     <title>Axios To Do List</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,12 +13,14 @@
     <form name="createTodoList" id="createTodoList">
         <input name = "title" type="text" size=42 placeholder="Add New 'To-do' Item here:">
         <input name = "description" 
-         type="text" size="resize" placeholder="Notes for New Todo Item">
+         type="text" size=42 placeholder="Notes for New Todo Item">
         <input name="price" type="number" min= 0 placeholder="Add Price">
         <!-- <input name="image" id="imageNewItem" type="file" accept="image/*" place holder="Add an Image"> -->
         <input type="submit" id="submit">
     </form>
-    <div id = "toDos"></div>
+    <div id = "toDos">
+        <p class="checkBoxNote">(Check the box to cross-off "To-Do's" but not remove them from the list.)</p>
+    </div>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
 <script src="script.js"></script> 
 </body>
