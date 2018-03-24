@@ -1,0 +1,131 @@
+/* 
+font-family: 'Italianno', cursive;
+font-family: 'Didact Gothic', sans-serif;
+ */
+*{
+    box-sizing: border-box;
+    margin: 0px;
+  }  
+body{
+    height: 100vh;
+    background-image: url("pics/black-gold-wall.png");
+    font-family: 'Didact Gothic', sans-serif;
+}
+header{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    color: #8A6E25;
+    margin-top: 45px;
+}
+nav{
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #272727;
+    border-top: 3px solid #8A6E25;
+    border-bottom: 3px solid #8A6E25;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: #8A6E25
+}
+header nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.listing {
+    color: #8A6E25;
+    list-style: square;
+    font-size: 20px; 
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+li, li a{
+    text-decoration: none;
+    border: none;
+}
+a{
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    
+}
+a:link {
+    color: #8A6E25;/* unvisited link */
+}
+a:visited {
+    color: #A3ACB2;/* visited link */
+}
+a:hover {
+    color: #EBE5DC;/* mouse over link */
+}
+a:active {
+    color:#E5C984;/* selected link */
+}
+main{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 25px;
+}
+h1 {
+    font-size: 4.5em;
+    font-family: 'Italianno', cursive;
+    font-style: bold;
+}
+h3 {
+    margin-top: 10px;
+    background-color: #272727;
+    width: 65%;
+    border-radius: 2px;
+    border-bottom: 7px groove #8A6E25; 
+}
+.about{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: #272727;
+    width: 65%;
+    border-radius: 2px;
+    border: 7px groove #8A6E25;
+    color: #EBE5DC;
+    padding: 45px;
+    /* overflow: hidden; */
+}
+.categories{
+    background-color: #272727;
+    text-align: center;
+    padding: 15px;
+    margin: 35px;
+    height: 100px;
+    width: 300px;
+    border: 7px groove #8A6E25;
+    font-size: 40px;
+    font-family: 'Italianno', cursive;
+    overflow: scroll;
+}
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+@media (max-width: 739px){
+    h3 {
+        width: 100%;
+    }
+}

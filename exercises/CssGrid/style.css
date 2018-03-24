@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    border: 1px solid greenyellow;
+    box-sizing: border-box;
+}
+.container {
+    height: 100vh;
+    display: grid;
+    grid-gap: 30px 30px;
+    grid-template-columns: .2fr .8fr;
+    grid-template-rows: .3fr 2fr .3fr;
+    grid-template-areas: "hdr hdr" "side cont" "ftr ftr";
+
+    /* grid-template: 1fr 1fr 1fr/1fr 2fr 1fr; */
+}
+.container div{
+    text-align: center;
+}
+header{
+    grid-area: hdr;
+}
+.sidebar{
+    grid-area: side;
+}
+.content{
+    grid-area: cont;
+}
+footer{
+    grid-area: ftr;
+}
