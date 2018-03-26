@@ -42,9 +42,10 @@ header nav{
 
 .listing {
     color: #8A6E25;
-    list-style: square;
-    font-size: 20px; 
+    list-style: none;
+    font-size: 30px; 
     text-align: left;
+    padding: 3px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,15 +56,15 @@ li, li a{
 }
 a{
     text-decoration: none;
-    text-align: center;
+    /* text-align: center; */
     display: inline-block;
-    
+    color: #8A6E25;
 }
 a:link {
     color: #8A6E25;/* unvisited link */
 }
 a:visited {
-    color: #A3ACB2;/* visited link */
+    color: #8A6E25;/* visited link */
 }
 a:hover {
     color: #EBE5DC;/* mouse over link */
@@ -84,12 +85,15 @@ h1 {
     font-family: 'Italianno', cursive;
     font-style: bold;
 }
+h2{
+    color: #8A6E25;
+}
 h3 {
     margin-top: 10px;
     background-color: #272727;
     width: 65%;
     border-radius: 2px;
-    border-bottom: 7px groove #8A6E25; 
+    border-bottom: 7px groove #8a6e25; 
 }
 .about{
     margin-top: 25px;
@@ -100,8 +104,16 @@ h3 {
     border: 7px groove #8A6E25;
     color: #EBE5DC;
     padding: 45px;
-    /* overflow: hidden; */
 }
+span{
+    font-size: 20px;
+    color: #8A6E25;
+}
+.city{
+    font-size: 20px;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
 .categories{
     background-color: #272727;
     text-align: center;
@@ -113,6 +125,9 @@ h3 {
     font-size: 40px;
     font-family: 'Italianno', cursive;
     overflow: scroll;
+}
+.listing-div{
+    height: 315px;
 }
 .footer{
     position: fixed;
