@@ -1,30 +1,24 @@
 var rs = require("readline-sync");
-var playerName = rs.question("Welcome, what's your name? ");
-console.log("Hello " + playerName + "!! This is fun!! If you want to see your status at any time press 's'");
+var playerName = rs.question("Welcome, what's your name?   ");
+console.log("\n   Hello " + playerName + "!! This is fun!!\n   Let's go for an adventure!\n");
 
 function Game(newPlayerName){
     this.player = {
         name: newPlayerName,
-        hp: 100,
-        attack: undefined,
+        hp: 200,
         enemiesKilled: 0,
-        inventory:[""]
+        inventory:["Prance-Fighting Skillz"]
     },
     this.enemy = {
         
     },
     this.gameOver = false;
 }
-
-// var enemies = function(){
-//     this.attack = Math.floor(Math.random()*20)+10;
-//     this.hp = 50;
-//     //etc.
-// }
 var Enemy = function(){
     this.type = genEnemyType();
     this.power = this.genPower();
-    this.defense = this.power * 3;
+    // this.defense = this.power * 3;
+    this.weapon = this.genWeapon();
 }
 
 
@@ -44,6 +38,16 @@ Enemy.prototype.genPower = function (){
         return Math.floor(Math.random() * (49-20)) + 49;
   } 
 }
+Enemy.prototype.genWeapon = function (){
+    switch (this.type) {
+      case "Ancient Dragon":
+          return " Fire Breath";
+      case "Prowler":
+          return " Stealth Cape";
+      case "Mighty Grunt":
+          return " Sonic Boomer";
+    } 
+  }
 
 function chooseAction(input){
     switch (input){
@@ -55,89 +59,92 @@ function chooseAction(input){
             break;
         case "s":
             checkStats();
+            break
         case "d":
-        console.log("You chose death over honor, GAME OVER!!")
-            currentGame.gameOver = true;//correct syntax??
+        console.log("You chose death over honor, GAME OVER!!\n")
+            currentGame.gameOver = true;
+            break;
         default:
-            let choice = rs.question("Make a valid choice, 'r' or 'a' or 's' or 'd'");
+            let choice = rs.question("  Please make a valid choice, 'r' or 'a' or 's' or 'd'.  ");
             chooseAction(choice);
     }
 }
-// function postAttackChoice(input){
-//     switch (input){
-//         case "w":
-//             var playerCommand = rs.question("Type 'w' to walk, then press enter: ");
-//         case "s":
-//             playerStats();        
-//     }
-// }
-    // console.log(chooseAction("w"));
+function checkStats(){
+    console.log( currentGame.player);
+}
 
-// function walk(input){
-//     if(input = "w"){
-//     console.log("You chose to walk.");
-//     }
-// }
 function playerAttack(){
-    let damage = Math.floor(Math.random()* 10);
+    let damage = Math.floor(Math.random()* 20);
     let newEnemyPower = currentGame.enemy.power - damage;
     currentGame.enemy.power = newEnemyPower;
-    console.log("You attacked, " + currentGame.enemy.type + " now has power level: " + newEnemyPower + "\n\n");
-        if(newEnemyPower > 0 ){
-            enemyAttack();
-        } else{
-            currentGame.player.enemiesKilled++
-            if (currentGame.player.enemiesKilled >= 3){
-                console.log("yay you won!");
-            }else{
-                let postKill = rs.question(currentGame.enemy.type + "has died you now have killed " + currentGame.player.enemiesKilled + "enemies only " + (currentGame.player.enemiesKilled - 3) + " left. Do you want to start walking ('w') or check your stats('s')?");
+    console.log("~~~~\n   You attacked!! " + currentGame.enemy.type + " lost " + damage + " power points\n and now has a total of: " + newEnemyPower + " power points.\n");
+    if(newEnemyPower > 0 ){
+        console.log("OOOH NOOOO!! Watch out!")
+        enemyAttack();
+    } else{
+        currentGame.player.enemiesKilled++
+        if (currentGame.player.enemiesKilled >= 3){
+            console.log("~~~ \n YAY you won! Game Over, play again soon!!");
+            currentGame.gameOver = true;
+        }else{
+            let pointsEarned = Math.floor(Math.random()* 10);
+            currentGame.player.inventory.push(currentGame.enemy.weapon);
+            console.log("\n  You KILLED " + currentGame.enemy.type + "!!\n  Enemy kill total: " + currentGame.player.enemiesKilled + "\n   You need to lay waste to " + (3 - currentGame.player.enemiesKilled) + " more to win the game.\n\n   Power points earned: " + pointsEarned + ", updated total " + (currentGame.player.hp += pointsEarned) + " power points.\n   You also get to keep " + currentGame.enemy.type + "'s" + currentGame.enemy.weapon + ". \n ");
+            // if(postKill === "w" || postKill === "s"){
+                // chooseAction(postKill);
+            // }else{
+                // console.log("Please choose to: walk ('w'), check status ('s') or die ('d')")
             }
-        }
+    }
 }
+
 function enemyAttack(){
-    let damage = Math.floor(Math.random()* 10);
+    let damage = Math.floor(Math.random()* 20);
     let newPlayerPower = currentGame.player.hp - damage;
-    currentGame.player.hp = newPlayerPower;
-    console.log(currentGame.enemy.type + " attacked!! You survived but, you lost " + damage + " Hit Points.\nYou now have a power level: " + newPlayerPower + "\n\n");
-    var postAttack = rs.question(" Do you want to keep fighting ('a'), run ('r'), die ('d'), or check your stats ('s')?\n");
-    chooseAction(postAttack);
+    if (newPlayerPower <= 5){
+        console.log("\n  " + currentGame.enemy.type + " attacked with fatal force you never had a chance. Sorry to say it but, YOU DEAD! GAME OVER!!\n");
+        currentGame.gameOver = true;
+    }else{
+        currentGame.player.hp = newPlayerPower;
+        console.log("\n   " + currentGame.enemy.type + " attacked!!\n You survived but, you lost " + damage + " power points.\n   Your new power points total is: " + newPlayerPower + "\n");
+        var postAttack = rs.question("\n Do you want to attack back ('a'), run ('r') or die ('d')? ");
+        chooseAction(postAttack);
+    }
+    
 }
 function run(input){
-    // console.log("You chose to run.\n\n");
-    if(Math.floor(Math.random()* 10) > 5){
-        console.log("you chose run enemy attacked and you died! GAME OVER!!");
-        currentGame.gameOver = true; ////////WHY ISNT THIS KICKING ME OUT why does it run the else portion?????????? WHAT's Missing? how do I reset the game or log ou to of the console?///////
-    }else{
-        var damage = enemyAttack();
-        ;
-        // console.log(postAttackChoice(postAttack));
-        let runChoice = rs.question("You chose to run and the enemy attacked now you only have " + currentGame.player.hp + " points. Do you choose to run again ('r'), die ('d') or attack ('a')?");
-        chooseAction(runChoice);
+    let randNum = Math.floor(Math.random()* 10);
+    if(randNum >= 8){
+        console.log("~~~\n You ran like a yellow belly, lilly livered scoundrel but " + currentGame.enemy.type + " attacked anyway and you died! GAME OVER!!\n");
+        currentGame.gameOver = true;
+    }else if(randNum < 8 && randNum > 5){
+         let points = Math.floor(Math.random()* 20);
+         let newPlayerPower = currentGame.player.hp + points;    
+    console.log("~~~\n  Wow you made a narrow escape and earned " + points + " power points. \n now your power level is: " + newPlayerPower + ".");
+    } else {
+        console.log("~~~\n\n  You chose to run ... Watch out oh NOOOOOO!! ");
+        enemyAttack();
+        // let runChoice = rs.question("You chose to run and the enemy attacked now you only have " + currentGame.player.hp + " points. Do you choose to run again ('r'), die ('d') or attack ('a')?  ");
+        // chooseAction(runChoice);
     } 
 }
 
 
 let currentGame = new Game(playerName);
-// while loop continues until - if win console.log("yay you won!") 
-// or
-// if loose console.log("so sad, play again!")
 while (!currentGame.gameOver){
-    var playerCommand = rs.question("Type 'w' to walk, then press enter: ");
+    var playerCommand = rs.question("Type 'w' to walk or 's' for stats: ");
     if (playerCommand === "w"){
         if(Math.floor(Math.random()* 100) > 75){
             let newEnemy = new Enemy;
             currentGame.enemy = newEnemy;
-            console.log("\n\n New enemy appeared his name is: " + newEnemy.type + ", \n  " + newEnemy.type +"'s power level is: " + newEnemy.power + ",\n and " + newEnemy.type +"'s defense level is: " + newEnemy.defense +"\n Your power level is: " + currentGame.player.hp + ",\n and you have killed " + currentGame.player.enemiesKilled +" enemies.\n");
-            var playerChoice = rs.question("Do you want to want to run, attack or die \n (press 'r' to run or 'a' to attack or 'd' to die)? \n");
-            chooseAction(playerChoice);
-            
-            // 
-                // fight function 
-                    // when attacked player needs to lose point
-                    // when the enemy is attacked he needs to lose points
-                    // if they win cool message add 1 to enemy death toll and ask player to walk again
-                    // if they lose cool death message and end game.
-
+            console.log("\n\n An enemy has appeared!!\n      Name: " + newEnemy.type + ", \n      Power Points: " + newEnemy.power + ",\n      Defense level: " + newEnemy.defense + ",\n      Weapon: " + newEnemy.weapon + "\n\n   Your current status:\n     Power Points: " + currentGame.player.hp + ",\n     Enemies Killed: " + currentGame.player.enemiesKilled + ", \n     Weapon(s): " + currentGame.player.inventory + "\n");
+            var playerChoice = rs.question("\n   Do you want to run ('r'), attack('a') or die ('d')?  ");
+            chooseAction(playerChoice);//issue when you choose check stats...
         }
+    }else if (playerCommand === "s"){
+            chooseAction("s");
+    } else{ 
+            console.log("Please choose to: walk ('w'), check status ('s') or die ('d')")
     }
 }
+
