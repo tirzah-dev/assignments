@@ -1,0 +1,48 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: floralwhite;
+    font-family: 'Montserrat', sans-serif;
+}
+h1, h2, {
+    font-family: 'Mina', sans-serif;
+    font-size: 2em;
+}
+li{
+    list-style-type: none;
+}
+.header {
+    text-decoration: underline;
+    text-align: center;
+    margin: 45px;
+    font-size: 3.5em;
+}
+.cardlist{
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    /* width: 30%; */
+}
+.card {
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    border: 3px solid darkslategrey;
+    border-radius: 5px;
+    margin: 15px;
+    padding: 5px;
+    width: 350px;
+}
+.App {
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+p{
+    font-size: 1em;
+}
