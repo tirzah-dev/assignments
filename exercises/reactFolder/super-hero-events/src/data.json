@@ -1,0 +1,37 @@
+[
+   {
+    "name":"Super Man",
+    "img" : "https://goo.gl/chMnbR",
+    "catchphrase":"I'm here to fight for truth, and justice, and the American way. - Super Man"
+   },
+   {
+    "name":"Wonder Woman",
+    "img" : "https://goo.gl/D8eV6t",
+    "catchphrase":"I will fight for those who cannot fight for themselves. - Wonder Woman"
+   },
+   {
+    "name":"Wolverine",
+    "img" : "https://goo.gl/YiN9vv",
+    "catchphrase":"You know, sometimes when you cage the beast, the beast gets angry. - Wolverine"
+   },
+   {
+    "name":"Shaggy",
+    "img" : "https://goo.gl/SZJW2S",
+    "catchphrase":"I can already taste those chocolate-covered hotdogs. - Shaggy"
+   },
+   {
+    "name":"Thor",
+    "img" : "https://goo.gl/Rhvc4N",
+    "catchphrase":"Our ancestors called it magic but you call it science. I come from a land where they are one and the same.  - Thor"
+   },
+   {
+    "name":"Black Widow",
+    "img" : "https://goo.gl/LjMTcc",
+    "catchphrase":"I'm always picking up after you boys. - Black Widow"
+   },
+   {
+    "name":"Mr. Incredible",
+    "img" : "https://goo.gl/3cyyEY",
+    "catchphrase":"No matter how many times you save the world, it always manages to get back in jeopardy again. - Mr. Incredible"
+   }
+]
