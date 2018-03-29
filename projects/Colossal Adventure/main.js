@@ -114,6 +114,7 @@ function enemyAttack(){
 }
 function run(input){
     let randNum = Math.floor(Math.random()* 10);
+    console.log(randNum)
     if(randNum >= 8){
         console.log("~~~\n You ran like a yellow belly, lilly livered scoundrel but " + currentGame.enemy.type + " attacked anyway and you died! GAME OVER!!\n");
         currentGame.gameOver = true;
