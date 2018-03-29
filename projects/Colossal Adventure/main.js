@@ -9,15 +9,13 @@ function Game(newPlayerName){
         enemiesKilled: 0,
         inventory:["Prance-Fighting Skillz"]
     },
-    this.enemy = {
-        
+    this.enemy = {  
     },
     this.gameOver = false;
 }
 var Enemy = function(){
     this.type = genEnemyType();
     this.power = this.genPower();
-    // this.defense = this.power * 3;
     this.weapon = this.genWeapon();
 }
 
@@ -90,10 +88,6 @@ function playerAttack(){
             let pointsEarned = Math.floor(Math.random()* 10);
             currentGame.player.inventory.push(currentGame.enemy.weapon);
             console.log("\n  You KILLED " + currentGame.enemy.type + "!!\n  Enemy kill total: " + currentGame.player.enemiesKilled + "\n   You need to lay waste to " + (3 - currentGame.player.enemiesKilled) + " more to win the game.\n\n   Power points earned: " + pointsEarned + ", updated total " + (currentGame.player.hp += pointsEarned) + " power points.\n   You also get to keep " + currentGame.enemy.type + "'s" + currentGame.enemy.weapon + ". \n ");
-            // if(postKill === "w" || postKill === "s"){
-                // chooseAction(postKill);
-            // }else{
-                // console.log("Please choose to: walk ('w'), check status ('s') or die ('d')")
             }
     }
 }
@@ -125,8 +119,6 @@ function run(input){
     } else {
         console.log("~~~\n\n  You chose to run ... Watch out oh NOOOOOO!! ");
         enemyAttack();
-        // let runChoice = rs.question("You chose to run and the enemy attacked now you only have " + currentGame.player.hp + " points. Do you choose to run again ('r'), die ('d') or attack ('a')?  ");
-        // chooseAction(runChoice);
     } 
 }
 
@@ -140,7 +132,7 @@ while (!currentGame.gameOver){
             currentGame.enemy = newEnemy;
             console.log("\n\n An enemy has appeared!!\n      Name: " + newEnemy.type + ", \n      Power Points: " + newEnemy.power + ",\n      Defense level: " + newEnemy.defense + ",\n      Weapon: " + newEnemy.weapon + "\n\n   Your current status:\n     Power Points: " + currentGame.player.hp + ",\n     Enemies Killed: " + currentGame.player.enemiesKilled + ", \n     Weapon(s): " + currentGame.player.inventory + "\n");
             var playerChoice = rs.question("\n   Do you want to run ('r'), attack('a') or die ('d')?  ");
-            chooseAction(playerChoice);//issue when you choose check stats...
+            chooseAction(playerChoice);
         }
     }else if (playerCommand === "s"){
             chooseAction("s");
