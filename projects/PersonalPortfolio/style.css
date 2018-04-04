@@ -12,13 +12,16 @@ body{
     background-color: whitesmoke;
 }
 header{
-    font-size: 3em;
+    font-size: 2.5em;
     padding: 20px;
     text-align: center;
+    color: #262626;
+    
 }
 h1{
     Font-Family: 'Cinzel', Cursive;
     text-align: center;
+    color: #262626;
 }
 nav, .project-list{
     list-style: none;
@@ -28,14 +31,26 @@ nav, .project-list{
     justify-content: space-around;
     /* background-color: aqua; */
 }
+.resume{
+    /* border: 3px solid black; */
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    text-align: center;
+    padding-top: 45px;
+    font-family: 'Cinzel', Cursive;
+    font-size: .35em;
+    color: white;
+    background-color: #262626;
+    margin-top: 3px;
+}
 nav{
-    border-top: 4px groove grey;
+    border-top: 4px groove #262626;
+    padding: 15px;
     margin: 25px;
-    /* border-bottom: 4px groove grey; */
-    /* background-color: white; */
 }
 .project-list{
-    background-color: grey;
+    background-image: url("./img/cozy-coder.jpg");
 }
 .project {
     height: 200px;
@@ -47,4 +62,7 @@ nav{
     justify-content: space-around;
     align-content: center;
     background-color: whitesmoke;
+}
+.projectName{
+    padding-top: 35px;
 }
