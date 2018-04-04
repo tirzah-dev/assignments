@@ -1,0 +1,51 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.app-wrapper{
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "hdr" "con" "ftr";
+    
+    background-image: no-repeat;
+    background-size: cover;
+    /* color: whitesmoke; */
+}
+header{
+    grid-area: hdr;
+    background-image: url("./img/pipes.jpg");
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    background-color: sienna;
+    color: whitesmoke;
+    padding: 15px;
+}
+a {
+    /* text-decoration-color: whitesmoke; */
+    text-decoration: none;
+    color: whitesmoke;
+}
+a:hover{
+    color: grey;
+}
+li{
+    list-style: none;
+}
+.content-wrapper{
+    grid-area: con;
+}
+footer{
+    grid-area: ftr;
+    background-color: sienna;
+    color: whitesmoke;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:60px;
+}

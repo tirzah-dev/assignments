@@ -7,7 +7,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Home from './pages/Home';
 import About from './pages/About';
-import Contact from './pages/Contact';
+import Services from './pages/Services';
 
 function App() {
     return (
@@ -17,7 +17,7 @@ function App() {
                     <Switch>
                         <Route exact path="/" component={Home}></Route>
                         <Route exact path="/about" component={About}></Route>
-                        <Route exact path="/contact" component={Contact}></Route>
+                        <Route exact path="/services" component={Services}></Route>
                     </Switch>
                 </div>    
             <Footer></Footer>

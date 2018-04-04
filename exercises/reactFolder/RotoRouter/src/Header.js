@@ -4,11 +4,12 @@ import { Link } from 'react-router-dom';
 function Header() {
     return (
         <div>
-            <h1>Welcome to my.com!</h1>
+            <h1>My Plumber</h1>
+            <h2>Full Service plumbing</h2>
             <nav>
                 <Link to="/">Home</Link>
                 <Link to="/about">About</Link>
-                <Link to="/contact">Contact</Link>
+                <Link to="/services">Services</Link>
             </nav>
         </div>
     )
