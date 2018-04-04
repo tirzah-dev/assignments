@@ -1,0 +1,21 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.app-wrapper{
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "hdr" "con" "ftr";
+}
+header{
+    grid-area: hdr;
+}
+
+.content-wrapper{
+    grid-area: con;
+}
+footer{
+    grid-area: ftr;
+}

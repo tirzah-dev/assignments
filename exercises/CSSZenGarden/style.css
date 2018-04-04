@@ -3,24 +3,47 @@
     box-sizing: border-box;
     border: 1px solid black;
 }
-.container {
-    height: 1400px;
+/* 
+font-family: 'Libre Baskerville', serif;
+font-family: 'Julius Sans One', sans-serif;
+ */
+.page-wrapper {
+    /* height: 1400px; */
     display: grid;
     grid-gap: 2px 2px;
     grid-template-areas: "hdr" "nav" "abt" "prt" "req" "art" "ftr";
-    grid-template-rows: .5fr 1fr 1fr 1fr 1fr .3fr
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    
+    font-family: 'Libre Baskerville', serif;
+    /* background-size: cover; */
 }
+.body{
+    font-family: 'Libre Baskerville', serif;
+}
+
 header{
     grid-area: hdr;
+    background: darkturquoise;
 }
+h1{
+    font-family: 'Julius Sans One', sans-serif;
+}
+h3{
+    font-family: 'Julius Sans One', sans-serif;
+}
+
 nav{
     grid-area: nav;
+    background-color: darksalmon;
 }
 .about{
     grid-area: abt;
+    background-color: darkolivegreen;
 }
 .participation{
     grid-area: prt;
+    background: url(img/bamboo.png);
+    background-repeat: no-repeat;
 }
 .requirements{
     grid-area: req;

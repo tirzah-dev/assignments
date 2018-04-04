@@ -21,4 +21,4 @@ console.log(isValidIP("023.54.245.3"));
 console.log(isValid("0.123.254.123"));
 console.log(isValidIP("255.245.245.0"));
 console.log(isValidIP("234.234.234.234"));
-console.log()
+// console.log()
