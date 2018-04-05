@@ -1,12 +1,12 @@
 import React from 'react'
-import DataContainer from "./DataContainer";
+import Color from "./Color";
 import '../style.css'
 
 function App (){
 
     return (
         <div>
-            <DataContainer />
+            <Color />
         </div>
     )
 }
