@@ -44,9 +44,10 @@ const removeContact = name => {
         name
     })
 }
+console.log(initialState);
 addContact({
         name: "ana",
         phone: "883-979-0983"
     });
 
-// removeContact("abcde")
+removeContact("abcde")
