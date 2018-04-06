@@ -1,0 +1,21 @@
+body{
+    background-color: rgb(118, 118, 240);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.app{
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+.app > button{
+    width: 175px;
+    font-size: 3em;
+}
+.app > .plus{
+    background-color: rgb(114, 226, 114);
+}
+.app > .minus{
+    background-color: rgb(245, 245, 104);
+}
