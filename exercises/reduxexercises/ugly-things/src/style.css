@@ -1,0 +1,47 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: lavender;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+input{
+    margin: 5px;
+}
+
+.catList {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 80%;
+}
+.image { 
+    height: "100px"; 
+    width: "auto";
+    margin: 15px;
+}
+
+.kitty {
+    /* margin: 10px; */
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.byebtn{
+    background-color: #85d2e9;
+    color: ghostwhite;
+}
