@@ -1,0 +1,13 @@
+*{
+    margin:0px;
+    box-sizing: border-box;
+}
+h1, h3{
+    font-family: fantasy;
+    margin: 10px;
+    color: #F2D703;
+}
+body{
+    background-color: black;
+    color: whitesmoke;
+}
