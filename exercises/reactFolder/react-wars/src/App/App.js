@@ -12,10 +12,12 @@ function App(){
         <div className="app-wrapper">
             <Header />
             <Sidebar />
-            <Switch>
-                <Route exact path="/" component={Homepage}></Route>
-                <Route path="/character/:index" component={CharacterData}></Route>
-            </Switch>
+            <div className="content">
+                <Switch>
+                    <Route exact path="/" component={Homepage}></Route>
+                    <Route path="/character/:index" component={CharacterData}></Route>
+                </Switch>
+            </div>
         </div>
     )
 }

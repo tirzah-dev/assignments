@@ -1,19 +1,64 @@
 *{
     margin:0px;
     box-sizing: border-box;
+    /* border: .5px solid greenyellow; only for orienting myself to my divs/elements*/
 }
-@font-face {
-    font-family: StarJedi;
-    src: url("./Star_Jedi_Rounded.ttf");
-}
+
 body{
-    background-image: url("./img/Night_stars.png");
+    background-image: url("./img/sw-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     color:#F2D703;
+    font-family: 'Raleway', sans-serif;
 }
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } 
 h1{
-    font-family: StarJedi;
+    font-family: 'Gugi', cursive;
 }
-li{
+ul{
     list-style: none;
-    margin: 15px;
+    text-decoration: none;
+    padding: 55px;
 }
+.content{
+    position: absolute;
+    left:300px; top:92px; right:0; bottom:0;
+    width: 60%;
+    height: 75%;
+    padding: 5%;
+    margin-right: 5%;
+    border-bottom: 2px solid #F2D703;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: rgb(128, 124, 117, .6);
+    
+}
+.sidebarlist{ 
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+    position:absolute;
+    padding: 50px 0px 60px 20px;
+    width: 30%;
+}
+a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    width: 175px;
+    padding-left: 15px;
+    border-bottom: 2px solid #F2D703;
+    margin-bottom: 3px;
+    background-color: rgb(128, 124, 117, .6);
+}
+
+body {
+    /* display: grid; */
+    /* grid-template-columns: 3fr 1fr;
+    grid-template-rows: 10vh 30vh 10vh;
+    grid-gap: 1em; */
+  }

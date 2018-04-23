@@ -46,13 +46,13 @@ class CharacterData extends Component{
     render(){
         const {name, hair_color, skin_color, height, mass } = this.state.characterData;
         return(
-            <li>
+            <div className="character">
                 <h1>{name}</h1>
                 <h3>Hair color: {hair_color}</h3>
                 <h3>Skin color: {skin_color}</h3>
                 <h3>Height: {height}</h3>
                 <h3>Mass: {mass}</h3>
-            </li>
+            </div>
         )
     }
 }
