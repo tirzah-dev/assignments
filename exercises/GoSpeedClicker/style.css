@@ -1,4 +1,21 @@
+/* font-family: 'Syncopate', sans-serif;
+font-family: 'Michroma', sans-serif;
+font-family: 'Marcellus SC', serif;
+font-family: 'Quantico', sans-serif; */
+
+body{
+    background-color: red;
+    color: whitesmoke;
+    text-align: center;
+}
 h1 {
     font-family: 'Faster One', cursive;
-    font-size: 75px;
+    font-size: 100px;
+    
+}
+h3, p{
+    font-family: 'Michroma', sans-serif;   
+}
+p{
+    font-size: 100px;
 }
