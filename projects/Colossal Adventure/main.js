@@ -82,7 +82,9 @@ function playerAttack(){
     } else{
         currentGame.player.enemiesKilled++
         if (currentGame.player.enemiesKilled >= 3){
-            console.log("~~~ \n YAY you won! Game Over, play again soon!!");
+            console.log("~~~ \n YAY " + playerName + " you won! your final stats are:")
+            checkStats();
+            console.log("Play again soon! GAME OVER")
             currentGame.gameOver = true;
         }else{
             let pointsEarned = Math.floor(Math.random()* 10);
@@ -101,7 +103,7 @@ function enemyAttack(){
     }else{
         currentGame.player.hp = newPlayerPower;
         console.log("\n   " + currentGame.enemy.type + " attacked!!\n You survived but, you lost " + damage + " power points.\n   Your new power points total is: " + newPlayerPower + "\n");
-        var postAttack = rs.question("\n Do you want to attack back ('a'), run ('r') or die ('d')? ");
+        var postAttack = rs.question("\n Do you want to attack back ('a'), run ('r') or die ('d')? "); //ifI select s it restarts the walk or stats sequence???
         chooseAction(postAttack);
     }
     
@@ -130,7 +132,7 @@ while (!currentGame.gameOver){
         if(Math.floor(Math.random()* 100) > 75){
             let newEnemy = new Enemy;
             currentGame.enemy = newEnemy;
-            console.log("\n\n An enemy has appeared!!\n      Name: " + newEnemy.type + ", \n      Power Points: " + newEnemy.power + ",\n      Defense level: " + newEnemy.defense + ",\n      Weapon: " + newEnemy.weapon + "\n\n   Your current status:\n     Power Points: " + currentGame.player.hp + ",\n     Enemies Killed: " + currentGame.player.enemiesKilled + ", \n     Weapon(s): " + currentGame.player.inventory + "\n");
+            console.log("\n\n An enemy has appeared!!\n      Name: " + newEnemy.type + ", \n      Power Points: " + newEnemy.power + ",\n      Weapon: " + newEnemy.weapon + "\n\n   Your current status:\n     Power Points: " + currentGame.player.hp + ",\n     Enemies Killed: " + currentGame.player.enemiesKilled + ", \n     Weapon(s): " + currentGame.player.inventory + "\n");
             var playerChoice = rs.question("\n   Do you want to run ('r'), attack('a') or die ('d')?  ");
             chooseAction(playerChoice);
         }

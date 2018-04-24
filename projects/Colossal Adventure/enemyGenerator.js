@@ -1,7 +1,7 @@
 var Enemy = function(){
     this.type = genEnemyType();
     this.hitPoints = this.genHitPoints();
-    this.defense = this.hitPoints * 3;
+    // this.defense = this.hitPoints * 3;
 }
 
 

@@ -55,10 +55,3 @@ a{
     margin-bottom: 3px;
     background-color: rgb(128, 124, 117, .6);
 }
-
-body {
-    /* display: grid; */
-    /* grid-template-columns: 3fr 1fr;
-    grid-template-rows: 10vh 30vh 10vh;
-    grid-gap: 1em; */
-  }

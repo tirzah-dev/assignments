@@ -51,7 +51,8 @@ class Color extends Component{
                     <div style={this.state}>
                         <h1>What' the HEX!?</h1>
                         <h2>{this.state.hex}</h2>
-
+                        <p>Refresh page to get a new color.</p>
+                        {/* add refresh button here - "get new color" */}
                     </div>
                 )
             }
