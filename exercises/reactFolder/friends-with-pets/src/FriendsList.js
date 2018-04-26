@@ -3,7 +3,7 @@ import Friend from "./Friend";
 import friends from "./data.js";
 
 const FriendsList = () =>
-    <div>
+    <div className="friendList">
         {friends.map((person, i) => <Friend key={person.name + i} human={person} index={i} />)}
     </div>
 

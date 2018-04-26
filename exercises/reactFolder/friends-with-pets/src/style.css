@@ -1,6 +1,48 @@
 *{
     margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Gloria Hallelujah', cursive;
 }
+/* 
+font-family: 'Nunito', sans-serif;
+font-family: 'Gloria Hallelujah', cursive;
+ */
 ul, li{
     list-style-type: none;
+}
+.friendList{
+   /* border: 3px solid black; */
+   margin: 2px;
+   display: flex;
+   flex-wrap: wrap;
+}
+.friend {
+    border: .5px solid greenyellow;
+    margin: 2px;
+    padding: 20px;
+    width: 48%;
+    background-color: mintcream;
+    border-radius: 5%;
+}
+.friendName{
+    /* border: .25px solid hotpink; */
+    margin: 2px;
+}
+.friendAge{
+    font-size: 20px;
+    /* border: .25px solid cornflowerblue; */
+    margin: 2px;
+}
+.pet {
+    /* border: .5px solid greenyellow; */
+    margin: 6px;
+    border-bottom: 2px solid greenyellow;
+}
+.pets {
+    /* border: .5px solid orange; */
+    /* margin: 2px; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    /* font-weight: bold;     */
 }
