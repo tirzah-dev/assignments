@@ -36,8 +36,7 @@ An * indicates the first idea I want to implement when I've completed MVP.
     *-As a user I want to be able to mask(blur out) comments that have spoilers, along with chapter indicator, it allows the "comment-reader" to decide if they want to unmask spoiler comments based on where they are in the book as well.
     -As a user I do not want to reply to comments that are masked, so I don't unintentionally make an unrelated reply to a comment I can't read anyway.
     -As a User I want to be able to unmask comments that have spoilers in them, so that I can read the comment and possibly reply to it.
-<!-- notifications -->
-    -Would like to add notifications
+    -As a user I would like the option of getting notifications.
 
 #Mind Map
-![alt text]("./img/MindMap_BookClubapp.png)
+![Mind Map]("./img/MindMap_BookClubapp.png)
