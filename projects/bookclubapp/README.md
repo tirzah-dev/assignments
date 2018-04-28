@@ -1,4 +1,4 @@
-#BOOKCLUB FULL STACK APP
+# BOOKCLUB FULL STACK APP #
 
 Book Club App - Tirzah Evangelista
 
@@ -10,7 +10,7 @@ https://www.goodreads.com/api
 - Find books by title, author, or ISBN and pulls ratings and image of book.
 - Login with Goodreads (after MVP is met)
 
-#MVP USER STORIES:
+## MVP USER STORIES: 
 <!-- EVENTS:  -->
 -As a user I want to create  an Event that includes the book(name, image, blurb/quote and (link to GoodReads.com reviews), Event Host name, Event Date & Event Location Address.
 -As a user I want to be able to edit any element of an event I created, so I can make updates or fix errors in the event.
@@ -21,7 +21,7 @@ https://www.goodreads.com/api
 -As a user I want to create/read/update/delete comments, so that I can communicate with others that are following an Event.
 -As a user I want to be able to indicate what chapter, page or Audio(time) I'm commenting about. (Is there a way to map what page/chapter the audio is on based on time input??), so that those reading my comment will know where/what my comment is refering to.
 
-#POST MVP Ideas:
+## POST MVP Ideas:
 An * indicates the first idea I want to implement when I've completed MVP.
 <!-- Directions -->
 -As a User, I want to be able to click on the Event address and get directions to the event, so I don't have to copy the event address, then exit the app to access another app then paste my address then click get directions. (Maybe use Google maps API for directions?? https://developers.google.com/maps/documentation/directions/ ).
@@ -38,5 +38,5 @@ An * indicates the first idea I want to implement when I've completed MVP.
     -As a User I want to be able to unmask comments that have spoilers in them, so that I can read the comment and possibly reply to it.
     -As a user I would like the option of getting notifications.
 
-#Mind Map
-![Mind Map]("./img/MindMap_BookClubapp.png)
+## Mind Map
+![mindmap](https://user-images.githubusercontent.com/16514603/39389130-fb090836-4a42-11e8-9c1e-41d5e0b6cb99.png)
