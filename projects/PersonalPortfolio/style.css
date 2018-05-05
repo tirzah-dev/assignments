@@ -8,7 +8,7 @@ Font-Family: 'Droid Serif', Serif;
  */
 
 body{
-    Font-Family: 'Fauna One', Serif;
+    font-family: 'Fauna One', Serif;
     background-color: whitesmoke;
 }
 header{
@@ -19,7 +19,7 @@ header{
     
 }
 h1{
-    Font-Family: 'Cinzel', Cursive;
+    font-family: 'Cinzel', Cursive;
     text-align: center;
     color: #262626;
 }
@@ -31,26 +31,43 @@ nav, .project-list{
     justify-content: space-around;
     /* background-color: aqua; */
 }
-.resume{
-    /* border: 3px solid black; */
+.resume, .phone{
     border-radius: 50%;
     height: 120px;
     width: 120px;
     text-align: center;
     padding-top: 45px;
     font-family: 'Cinzel', Cursive;
-    font-size: .35em;
+    font-size: .40em;
     color: white;
     background-color: #262626;
     margin-top: 3px;
+}
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+a:hover{
+    color: #ca307c;
+}
+.resume:hover{
+    background-color: whitesmoke;
+    border: 3px solid #ca307c;
 }
 nav{
     border-top: 4px groove #262626;
     padding: 15px;
     margin: 25px;
 }
-.project-list{
+main{
     background-image: url("./img/cozy-coder.jpg");
+    height: 125vh;
+    padding-bottom: 60px;
+}
+.project-list{
+    padding-top: 45px;
+    height: 35vh;
+    padding-bottom: 50px;
 }
 .project {
     height: 200px;
@@ -65,4 +82,41 @@ nav{
 }
 .projectName{
     padding-top: 35px;
+}
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #262626;
+    color: #FFFFFF;
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Roboto', Sans-Serif;
+}
+
+@media only screen and (max-width: 450px) {
+    h1{
+        font-size: 1.5em;
+    }
+    h3{
+        font-size: .75em;
+    }
+}
+@media only screen and (max-width: 300px) {
+    h1{
+        font-size: 1em;
+    }
+    h3{
+        font-size: .5em;
+    }
+    .project{
+        height: 125px;
+        width: 125px;
+    }
 }
