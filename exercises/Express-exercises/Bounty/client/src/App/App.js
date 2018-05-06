@@ -3,7 +3,8 @@ import React from 'react';
 function App(props) {
     return (
         <div>
-            hello
+            <h1>BOUNTY HUNTER</h1>
+            <Bounty />
         </div>
     )
 }

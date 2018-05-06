@@ -20,14 +20,14 @@ const bountyReducer = (state = initialBountyState, action) => {
     }
 }
 
-// export const getBounties = () => {
-//     return axios.get("/bounties")
-//     .then(response => {
-//         return {
-//             type: "GET_BOUNTIES",
-//             bounties: response.data
-//         };
-//     })
+export const getBounties = () => {
+    return axios.get("/bounties")
+    .then(response => {
+        return {
+            type: "GET_BOUNTIES",
+            bounties: response.data
+        };
+    })
 //     .catch(err => {
 //         return {
 //             type: "ERR_MSG",
