@@ -29,7 +29,6 @@ nav, .project-list{
     flex-direction: row;
     flex-flow: wrap;
     justify-content: space-around;
-    /* background-color: aqua; */
 }
 .resume, .phone{
     border-radius: 50%;
@@ -43,17 +42,23 @@ nav, .project-list{
     background-color: #262626;
     margin-top: 3px;
 }
+.resume a {
+    color: #FFFFFF;
+} 
 a{
     text-decoration: none;
-    color: #FFFFFF;
 }
 a:hover{
+    color: #ca307c;
+}
+.resume a:hover{
     color: #ca307c;
 }
 .resume:hover{
     background-color: whitesmoke;
     border: 3px solid #ca307c;
 }
+.
 nav{
     border-top: 4px groove #262626;
     padding: 15px;
@@ -63,11 +68,14 @@ main{
     background-image: url("./img/cozy-coder.jpg");
     height: 125vh;
     padding-bottom: 60px;
+    padding-top: 45px;
 }
-.project-list{
+.projectList{
     padding-top: 45px;
     height: 35vh;
     padding-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
 }
 .project {
     height: 200px;
@@ -80,13 +88,37 @@ main{
     align-content: center;
     background-color: whitesmoke;
 }
+.project:hover{
+    border: 3px solid #ca307c;
+}
 .projectName{
-    padding-top: 35px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    color: whitesmoke;
+    font-size: 1.5em;
+    font-weight: 800;
+}
+.bookClub{
+    background-image: url("./img/vintage-book-stack_50.jpg");
+    background-position: center;
+    height: 200px;
+    width: 200px;
+    padding-left: 10px; 
+}
+.artsyApi{
+    background-image: url("./img/key-hole_50.jpeg");
+    background-position: center;
+}
+.babyName{
+    background-image: url("./img/baby-love_50.jpeg");
+    background-position: center;
 }
 footer{
     position: fixed;
     left: 0;
     bottom: 0;
+    height: 35px;
     width: 100%;
     background-color: #262626;
     color: #FFFFFF;
@@ -99,6 +131,8 @@ ul{
     padding: 10px;
     font-family: 'Roboto', Sans-Serif;
 }
+
+
 
 @media only screen and (max-width: 450px) {
     h1{
@@ -115,8 +149,8 @@ ul{
     h3{
         font-size: .5em;
     }
-    .project{
+    /* .project{
         height: 125px;
         width: 125px;
-    }
+    } */
 }
