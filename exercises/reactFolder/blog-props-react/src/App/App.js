@@ -1,13 +1,16 @@
 import React from "react";
+import Header from './Header';
 import BlogList from "./Blog/BlogList";
+import Footer from './Footer';
 import "../style.css"
 
-function App (){
-
+function App() {
+   
     return (
         <div>
-        HELLO WORLD
-            <BlogList></BlogList>
+            <Header />
+            <BlogList />
+            <Footer />
         </div>
     )
 }

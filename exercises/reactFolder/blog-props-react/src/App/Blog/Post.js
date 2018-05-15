@@ -1,19 +1,15 @@
-const blog1 = {
-    title: "lorem",
-    post: "dahoueaoaeh",
-    postClass: "red"
+import React from 'react'
+
+function BlogPost (props) {
+    let {title, subtitle, date} = props;
+    return(
+        <div>
+        <h3>{title}</h3>
+        <h4>{subtitle}</h4>
+        {/* <p>Posted by {author} on {date}</p> */}
+        <p>Posted by Start Bootstrap on {date}</p>
+        </div>
+    )
 }
-const blog2 = {
-    title: "THIS IS BLOG 2",
-    post: "lade da de dah",
-    postClass: "purple"
-}
-const blog3 = {
-    title: "I'ma writing three",
-    post: "bunch o words here",
-    postClass: "blue"
-}
-const blog4 = {
-    title: "And 4th goes to blog",
-    post: "filler text"
-}
+
+export default BlogPost;

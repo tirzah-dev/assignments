@@ -30,31 +30,31 @@ app.route("/todoex")
 
     // GET One request
     // any request to the todos/id endpoint we will send back the todo matching that id
-    app.route("/todoex/:id")
-        .get((req, res)=> {
-            //get param id:
-            const { id } = req.params;
-            // console.log(id)
-            const foundtodo = todos.filter(todo => todo._id === id)[0];
-            //sendback the todo
-            res.status(200).send(foundtodo);
-        })
-        // DELETE one request
-        .delete((req, res)=> {
-            const { id } = req.params;
-            //find and remove todo matching id:
-            todos = todos.filter(todo => todo._id !== id);
-            //send back the message the todo was removed
-            res.status(204).send();
-        })
-        //EDIT one request
-        .put((req, res)=>{
-            //find param id
-            const { id } = req.params;
-            let editedtodo = req.body;
-            //map throgh todos and replace the todo w/ matching id with req.body
-            todos = todos.map(todo => todo._id === id ? editedtodo = {...todo, ...editedtodo} : todo);
-            res.status(200).send(editedtodo);
-        })
+app.route("/todoex/:id")
+    .get((req, res)=> {
+        //get param id:
+        const { id } = req.params;
+        // console.log(id)
+        const foundtodo = todos.filter(todo => todo._id === id)[0];
+        //sendback the todo
+        res.status(200).send(foundtodo);
+    })
+    // DELETE one request
+    .delete((req, res)=> {
+        const { id } = req.params;
+        //find and remove todo matching id:
+        todos = todos.filter(todo => todo._id !== id);
+        //send back the message the todo was removed
+        res.status(204).send();
+    })
+    //EDIT one request
+    .put((req, res)=>{
+        //find param id
+        const { id } = req.params;
+        let editedtodo = req.body;
+        //map throgh todos and replace the todo w/ matching id with req.body
+        todos = todos.map(todo => todo._id === id ? editedtodo = {...todo, ...editedtodo} : todo);
+        res.status(200).send(editedtodo);
+    })
 
 app.listen(port, ()=> console.log("Server running on port " + port));

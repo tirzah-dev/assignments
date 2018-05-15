@@ -1,83 +1,41 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-constructor = () => {
-    this.initialState = {
-        inputs:{
-            firstName: "",
-            lastName: "",
-            email: ""
-        },
-        people: []
+
+class App extends Component{
+    constructor(props){
+        super(props);
+        this.state ={
+            // name:"",
+            // names:[]
+            value: ''
+        };
+        this.handleChange = this.handleChange.bind(this);
+        this.handlesubmit = this.handleSubmit.bind(this);
     }
-    this.state = this.initialState;
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-}
+    //  START WORKING HERE
+    handleChange = (event) => {
+        this.setState({value: event.target.value});
+    }
+    handleSubmit = (event) => {
+        event.preventDefault();
+        alert("A name was submitted: " + this.state.value);
+        console.log (this.state.value)
+        // this.setState.name( name => input.value)
+    }
 
-handleChange = (e) => {
-    const { value, name} = e.target;
-    console.log(e.target);
-    this.setState(prevState => {
-        return {
-            inputs: {
-                ...prevState.inputs,
-                [name]: value
-            }
-        }
-    });
-}
-
-handleSubmit = (e) => {
-    e.preventDefault();
-    this.setState(prevState => {
-        return {
-            //reset the form inputs to their original state, and include new object in the array
-            inputs: this.initialState.inputs,
-            people: [...prevState.people, prevState.inputs]
-        }
-    })
-}
-
-render = () => {
-    const { firstName, lastName, email } = this.state.inputs;
-    const {people} = this.state;
-
-    return (
-        <form onSubmit={this.handleSubmit}>
-            <input name="firstName" onChange={this.handleChange} value={firstName} type="text" placeholder="Type here"/>
-            <input name="email" onChange={this.handleChange} value={email} type="email" placeholder="@Email"/>
-            <button>Submit</button>
-            <ul>
-                <li></li>
-            
-        </form>
-    )
-}
-
-const List = () =>{
-    const personObj = people.map(personObj =>
-    person = {personObj},
-    return(
-        <li>
-            {personObj}
-        </li>
-    )
-)}
-
-
-const Person = () => {
-    return(
+    render(){
+        return(
         <div>
-            <h2>
-                onSubmit={(e)=>
-                this.handleSubmit(this.state.people)}
-                style = {{
-                    fontSize: "25px",
-                    color: "#3B444C"
-                }}
-            </h2>
+            <form onSubmit={this.handleSubmit}> 
+                <input type="text" placeholder="name"/>
+                <button>submit</button>
+            </form>
+            <ul>
+                {/* {this.state.names.map(name => <li>{name}</li>)} */}
+            </ul>
         </div>
-    )
+        )
+    //list of names after they are entered
 }
-
+};
 export default App;
