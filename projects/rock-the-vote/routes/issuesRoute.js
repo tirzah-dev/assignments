@@ -79,11 +79,8 @@ issueRouter.route("/:id/delete-comment/:commentId")
 issueRouter.route("/:id/edit-comment/:commentId")
     .put((req, res) => {
         IssueModel.findById(req.params.id, (err, foundIssue) => {
-            if(err) return res.send(err);
-            for (let key in req.body) {
-                foundIssues.comments.id(req.params.commentId)[key] =
-                req.body[key];
-            }
+            if(err) return res.status(500).send(err);
+            comment.set(req.body);
             foundIssue.save((err, savedIssue) =>{
                 if(err) return res.send(err);
                 res.status(200).send(savedEvent)

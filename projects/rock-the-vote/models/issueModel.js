@@ -11,19 +11,9 @@ const isseSchema = new Schema({
         type: String,
         required: false
     },
-    votes:{
-        upVotes: {
-            type: Number,
-            default: 0
-        },
-        downVotes: {
-            type: Number,
-            default: 0
-        },
-        totalVotes:{
-            type: Number,
-            default: 0
-        }
+    totalVotes:{
+        type: Number,
+        default: 0
     },
     comments: Array
 });
