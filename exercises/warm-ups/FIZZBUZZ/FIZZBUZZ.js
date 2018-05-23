@@ -15,5 +15,5 @@ function fizzBuzzFill(){
     }
     return fizzBuzzArr;
 }
-console.log(fizzbuzzFill());
+console.log(fizzBuzzFill());
 

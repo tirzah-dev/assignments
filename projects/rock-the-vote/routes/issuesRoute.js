@@ -1,7 +1,7 @@
 const express = require("express");
-const issueRouter = express.router();
+const issueRouter = express.Router();
 
-const issueModel = require("../models/issueModel");
+const IssueModel = require("../models/issueModel");
 
 //routes
 issueRouter.route("/")
@@ -16,7 +16,7 @@ issueRouter.route("/")
         const newIssue = new IssueModel(req.body);
         newIssue.save((err, savedIssue) => {
             if (err) return res.send(err);
-            res.status(200).send(foundIssues)
+            res.status(201).send(savedIssue)
         });
     })
 
@@ -87,4 +87,6 @@ issueRouter.route("/:id/edit-comment/:commentId")
             })
         })
     })
+
+module.exports = issueRouter;
 
