@@ -24,6 +24,6 @@ A user should be able to attach an imgUrl to the item (and if there is an imgUrl
 ## Tier three requirements (Gold)
 A user will be able to delete todos (this is different from marking a todo as "completed")
 
-##Extra credit
+## Extra credit
 
 A user will be able to edit todos
