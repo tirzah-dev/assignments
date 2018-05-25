@@ -16,7 +16,6 @@ header{
     padding: 20px;
     text-align: center;
     color: #262626;
-    
 }
 h1{
     font-family: 'Cinzel', Cursive;
@@ -42,6 +41,10 @@ nav, .project-list{
     background-color: #262626;
     margin-top: 3px;
 }
+img:hover{
+    border: 3px solid #ca307c;
+    border-radius: 50%;
+}
 .resume a {
     color: #FFFFFF;
 } 
@@ -51,14 +54,9 @@ a{
 a:hover{
     color: #ca307c;
 }
-.resume a:hover{
-    color: #ca307c;
-}
 .resume:hover{
-    background-color: whitesmoke;
     border: 3px solid #ca307c;
 }
-.
 nav{
     border-top: 4px groove #262626;
     padding: 15px;
@@ -66,14 +64,14 @@ nav{
 }
 main{
     background-image: url("./img/cozy-coder.jpg");
-    height: 125vh;
+    height: 150vh;
+    background-size: cover;
     padding-bottom: 60px;
     padding-top: 45px;
 }
 .projectList{
     padding-top: 45px;
     height: 35vh;
-    padding-bottom: 50px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -102,9 +100,6 @@ main{
 .bookClub{
     background-image: url("./img/vintage-book-stack_50.jpg");
     background-position: center;
-    height: 200px;
-    width: 200px;
-    padding-left: 10px; 
 }
 .artsyApi{
     background-image: url("./img/key-hole_50.jpeg");
@@ -118,10 +113,13 @@ footer{
     position: fixed;
     left: 0;
     bottom: 0;
-    height: 35px;
+    height: 65px;
     width: 100%;
     background-color: #262626;
     color: #FFFFFF;
+}
+.footer{
+    padding: 25px;    
 }
 ul{
     list-style: none;
