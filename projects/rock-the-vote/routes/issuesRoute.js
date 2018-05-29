@@ -66,7 +66,7 @@ issueRouter.route("/:id/add-comment")
 //delete comment
 issueRouter.route("/:id/delete-comment/:commentId")
     .delete((req, res) => {
-        IssueModel.findById(req.params.id, (err, foundEvent) => {
+        IssueModel.findById(req.params.id, (err, foundIssue) => {
             if (err) return res.send(err);
             foundIssue.comments.id(req.params.commentId).remove();
             foundIssue.save((err, savedIssue) => {
@@ -83,7 +83,7 @@ issueRouter.route("/:id/edit-comment/:commentId")
             comment.set(req.body);
             foundIssue.save((err, savedIssue) =>{
                 if(err) return res.send(err);
-                res.status(200).send(savedEvent)
+                res.status(200).send(savedIssue)
             })
         })
     })

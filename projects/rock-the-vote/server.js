@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "client", "build")));//needed to deploy to Heroku
 
 //routes
-app.use("/api/issuesRoute", router);
+app.use("/api/issues", router);
 
 mongoose.connect(database, (err) => {
     if(err) console.error(err);

@@ -8,24 +8,24 @@ const initialIssueState = {
 
 const issueReducer = (state = initialIssueState, action) => {
     switch (action.type) {
-        case 'CREATE_EVENT':
+        case 'CREATE_ISSUE':
         return{
             ...state,
             loading: false,
-            data: [...state.data, action.issues]
-        }
+            data: [...state.data, action.issue]
+        };
         case 'GET_ISSUES':
         return{
             ...state,
             loading: false,
             data: action.issues
-        }
-        case 'DELETE_EVENT':
+        };
+        case 'DELETE_ISSUE':
         return{
             ...state,
             loading: false,
             data: state.data.filter(issue => issue._id !== action.id)
-        }
+        };
         case 'EDIT_ISSUE':
         return{
             ...state,
@@ -43,15 +43,14 @@ const issueReducer = (state = initialIssueState, action) => {
     }
 }
 
-export const createIssue = (inputs, goToLocation) => {
+export const createIssue = (inputs) => {
     return dispatch => {
         axios.post('/api/issues', inputs)
             .then(response => {
                 dispatch({
-                    type: 'CREATE_EVENT',
-                    event: response.data
+                    type: 'CREATE_ISSUE',
+                    issue: response.data
                 });
-                goToLocation('/all-issues');
             })
     }
 }
@@ -83,14 +82,14 @@ export const deleteIssue = (id) => {
                 })
             })
             .catch(err => {
-                dispatchd({
+                dispatch({
                     type: 'ERR_MSG',
                     errMsg: 'Data Unavailable'
                 });
             });
     }
 }
-export const editIssue = (id, inputs, goToLocation) => {
+export const editIssue = (id, inputs) => {
     return dispatch => {
         axios.put('/api/issues/' + id, inputs)
         .then(response => {
@@ -99,7 +98,6 @@ export const editIssue = (id, inputs, goToLocation) => {
                 editedIssue: response.data,
                 id
             })
-            goToLocation('/issue/' + id)
         })
         .catch(err => {
             dispatch({
