@@ -15,10 +15,10 @@ a{
 a:hover{
     color: firebrick;
     font: bolder;
-    font-size: 110%;
+    font-size: 105%;
 }
 button:hover{
-    font-size: 110%;
+    font-size: 105%;
     border-radius: 5px;
     background-color: antiquewhite;
 }

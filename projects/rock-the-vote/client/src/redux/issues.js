@@ -91,8 +91,10 @@ export const deleteIssue = (id) => {
 }
 export const editIssue = (id, inputs) => {
     return dispatch => {
-        axios.put('/api/issues/' + id, inputs)
+        axios.put(`/api/issues/${id}`, inputs)
         .then(response => {
+            console.log("response", inputs);
+            console.log("response.data", response.data);
             dispatch({
                 type: 'EDIT_ISSUE',
                 editedIssue: response.data,

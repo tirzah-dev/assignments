@@ -7,28 +7,43 @@ class Comments extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            comments: ''
+            comment: ''
         }
     }
-    handleComment(e){
-        let {value} = e.target;
+    handleComment = (e) => {
+        const {value} = e.target;
         this.setState ({
             comment: value
         });
     }
-    submitComment(e){
+    clearInput = () => {
+        this.setState({
+            comment: ""
+        });
+    }
+    submitComment = (e)=>{
         e.preventDefault();
         let { currentIssue } = this.props;
         let { comment } = this.state;
-        this.currentIssue.comments.push(comment);
-        this.props.editIssue(currentIssue);
+        currentIssue.comments.push(comment);
+        this.props.editIssue(currentIssue._id, currentIssue);
         this.clearInput();
     };
     render(){
+        let { currentIssue } = this.props;
         return (
             <div className="comments">
+                <form onSubmit={this.submitComment}>
+                    <label htmlFor="">Comment:
+                    <input name="comment" value={ this.state.comment}
+                    onChange={ this.handleComment} /> </label>
+                    <button className="createIssueButton">Submit Comment</button>
+                </form>
                 <h4>Comments</h4>
-                {/* <h4>{this.comments}</h4> //check how to toggle display */}
+                <ul>
+                    { currentIssue.comments.map(comment => <li>{ comment }</li>
+                    )}
+                </ul>
             </div>
         )
     };

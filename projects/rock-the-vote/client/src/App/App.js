@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getIssues } from '../redux/issues';
-import { Switch, Route } from 'react-router-dom';
+
 //import components
-import EditForm from './EditIssue'
+// import EditForm from './EditIssue';
 import List from './List';
 import NewIssueForm from './NewIssueForm';
 
@@ -14,9 +14,6 @@ class App extends Component {
     render() {
     return (
         <div>
-            <Switch>
-                <Route path="/edit-form/:id" component={ EditForm } />
-            </Switch>
             <h1>ROCK THE VOTE</h1>
             <NewIssueForm />
             <List />

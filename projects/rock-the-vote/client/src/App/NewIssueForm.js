@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { createIssue } from '../redux/issues';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
-// import Nav from './Nav';
 
 class NewIssueForm extends Component {
     constructor(props) {
@@ -22,9 +20,16 @@ class NewIssueForm extends Component {
             }
         });
     }
+    clearInput = () => {
+        this.setState({
+            title: '',
+            description:'',
+        });
+    }
     handleSubmit = (e) => {
         e.preventDefault(e);
         this.props.createIssue(this.state);
+        this.clearInput();
     }
     render() {
         return (
@@ -39,9 +44,8 @@ class NewIssueForm extends Component {
                     <label htmlFor="">Issue Details:
                         <input name="description" value={this.state.description} onChange={this.handleIssueChange} />
                     </label>
-                    <button className="createIssueButton">Create Issue
+                    <button className="createIssueButton">Create New Issue
                     </button>
-                    <Link to="/App" className="cancel"><button>Cancel</button></Link>
                 </form>
              
             </div>

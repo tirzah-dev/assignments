@@ -9,16 +9,9 @@ class EditForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            title: "",
-            description: ""
+            title: props.title,
+            description: props.description
         };
-    }
-    componentDidMount() {
-        axios.get("/api/issues/")
-            .then(response => this.setState({
-                ...response.data,
-                loading: false
-            }));
     }
     handleIssueChange = (e) => {
         const { name, value } = e.target;
@@ -29,9 +22,11 @@ class EditForm extends Component {
             }
         });
     }
+    
     handleSubmit = (e) => {
+        console.log("thisone", this.props);
         e.preventDefault(e);
-        this.props.editIssue(this.state._id, this.state, this.props.history.push);
+        this.props.editIssue(this.props._id, this.state);
     }
     render() {
         return (
