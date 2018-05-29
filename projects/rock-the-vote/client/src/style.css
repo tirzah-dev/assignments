@@ -15,10 +15,12 @@ a{
 a:hover{
     color: firebrick;
     font: bolder;
-    font-size: 120%;
+    font-size: 110%;
 }
-.delete:hover{
-    font-size: 120%;
+button:hover{
+    font-size: 110%;
+    border-radius: 5px;
+    background-color: antiquewhite;
 }
 h1{
     font-size: 75px;
