@@ -30,6 +30,7 @@ nav, .project-list{
     justify-content: space-around;
 }
 .resume, .phone{
+    border: 3px solid #262626;
     border-radius: 50%;
     height: 120px;
     width: 120px;
@@ -40,6 +41,10 @@ nav, .project-list{
     color: white;
     background-color: #262626;
     margin-top: 3px;
+}
+img{
+    border: 3px solid #262626;
+    border-radius: 50%;
 }
 img:hover{
     border: 3px solid #ca307c;
@@ -78,7 +83,8 @@ main{
 .project {
     height: 200px;
     width: 200px;
-    border: 3px solid black;
+    padding: 10px;
+    border: 3px solid #4c4d517a;
     border-radius: 50%;
     margin: 30px;
     display: flex;
@@ -86,25 +92,34 @@ main{
     align-content: center;
     background-color: whitesmoke;
 }
-.project:hover{
+.projectName:hover{
     border: 3px solid #ca307c;
 }
 .projectName{
     display: flex;
     text-align: center;
     align-items: center;
-    color: whitesmoke;
-    font-size: 1.5em;
+    color: #4C4D51;
+    height: 50px;
+    padding: 10px;
+    background-color: rgb(255,255,255, 0.8);
+    font-size: 1.25em;
     font-weight: 800;
+    margin: auto;
+    border-radius: 10px;
 }
 .bookClub{
     background-image: url("./img/vintage-book-stack_50.jpg");
     background-position: center;
 }
-.artsyApi{
-    background-image: url("./img/key-hole_50.jpeg");
+.cssZenGarden{
+    background-image: url("./img/pebbles-2162197_640.jpg"); /*Image by Rex Francis from Pixabay*/
     background-position: center;
 }
+/* .artsyApi{
+    background-image: url("./img/key-hole_50.jpeg");
+    background-position: center;
+} */
 .babyName{
     background-image: url("./img/baby-love_50.jpeg");
     background-position: center;
